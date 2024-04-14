@@ -1,0 +1,19 @@
+.toy-preview {
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    width: 18rem;
+    height: 18rem;
+}
+
+@media (max-width: 1000px) {
+    .toy-preview {
+        width: 50vh;
+        padding-bottom: 10px;
+    }
+
+    .toy-list {
+        overflow-y: scroll;
+        max-height: 650px;
+    }
+}

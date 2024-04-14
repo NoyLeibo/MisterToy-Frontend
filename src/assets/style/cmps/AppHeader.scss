@@ -1,0 +1,59 @@
+.app-header {
+    width: 100vw;
+    color: var(--clr1bg);
+    padding: 1em;
+    box-shadow: 2px 20px 50px black;
+    background-color: #4e4d4d;
+
+    h2 {
+        font-family: "Edu VIC WA NT Beginner", cursive;
+        color: $gray1;
+        padding-bottom: 0.05em;
+        border-bottom: 2px solid $gray1;
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--clr1bg);
+
+    a,
+    .logoutbtn {
+        color: $gray1;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        font-family: "Edu VIC WA NT Beginner", cursive;
+        font-size: x-large;
+        padding-bottom: 0.05em;
+        border-bottom: 2px solid $gray1;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+
+        &:hover {
+            color: #a8a8a8;
+            border-bottom: 2px solid #a8a8a8;
+        }
+    }
+}
+
+@media(max-width: 720px) {
+    .app-header {
+        color: var(--clr2bg);
+
+        a,
+        .logoutbtn {
+            color: var(--clr2bg);
+        }
+    }
+}

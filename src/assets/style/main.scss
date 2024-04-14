@@ -1,0 +1,24 @@
+/* Setup */
+@import 'setup/vars';
+@import 'setup/typography';
+@import 'setup/mixins';
+@import 'setup/functions';
+
+/* Base */
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/layout';
+@import 'pages/HomePage';
+@import 'pages/AboutUs';
+@import 'pages/LoginPage';
+// @import 'pages/RegisterPage';
+/* @import 'base/forms.css'; */
+
+/* Components */
+@import 'cmps/AppHeader';
+@import 'cmps/ToggleBtn';
+/* @import 'cmps/UserMsg.css'; */
+
+@import 'cmps/ToysList';
+@import 'cmps/ToyPreview';
+@import 'cmps/ToyFilter';

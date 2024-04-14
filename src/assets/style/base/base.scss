@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* margin: .5em 1.5em; */
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+body {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://wallpapers.com/images/hd/toy-story-4-carnival-a06gs94b1uxnge3v.jpg');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

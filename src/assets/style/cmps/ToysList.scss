@@ -1,0 +1,75 @@
+.toy-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.toy-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Changed to space-between for better spacing
+    background-color: rgba(103, 103, 121, 0.8);
+    margin: 1em;
+    border: 2px solid #3498db; // A softer border color
+    border-radius: 8px; // Rounded corners
+    overflow: hidden; // Ensures content fits within the borders
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for hover effects
+
+    &:hover {
+        transform: translateY(-5px); // Slight lift on hover
+        box-shadow: -1px 1px 20px 10px black; // Enhanced shadow on hover
+    }
+}
+
+.toy-preview h3,
+.toy-preview h4 {
+    font-weight: bold;
+    margin: 10px; // Added some margin for spacing
+    text-align: center; // Center align text
+}
+
+/* Style for loading page */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.412);
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db; // Color matches the toy list border
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animation for the loader */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.toy-img {
+    width: 100px;
+    height: 120px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,19 @@
+.preview-btn {
+    width: 3rem;
+    height: 2rem;
+    background-color: #6a6a6a;
+    border-radius: 12px;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.2rem;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background-color: rgb(229, 226, 226);
+        color: black;
+    }
+}

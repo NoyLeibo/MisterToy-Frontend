@@ -1,0 +1,103 @@
+.main-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: $clrmainbg;
+    border-radius: 50px;
+    border: 1px solid black;
+    height: 75vh;
+    box-shadow: 0 0 17px 3px black;
+
+    @media (max-width: 768px) {
+        height: auto;
+        margin: 15px;
+        padding: 15px;
+        max-height: 700px;
+        overflow-y: scroll;
+    }
+
+    p {
+        font-weight: bold;
+        font-family: "Edu VIC WA NT Beginner", cursive;
+    }
+
+    h2 {
+        padding-bottom: 0.05em;
+        border-bottom: 2px solid $clr2;
+        color: #333;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 768px) {
+            font-size: 1.2em;
+        }
+    }
+}
+
+.featured-toys .toy-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+
+    .toy-item {
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 5px;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 2px 2px black;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            max-width: 250px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.20);
+            }
+        }
+    }
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(185, 181, 181, 0.9);
+    border-radius: 10px;
+
+    p {
+        color: #555;
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+        @media (max-width: 768px) {
+            font-size: 0.9em;
+        }
+    }
+}
+
+.special-offers {
+    background-color: rgba(114, 114, 114, 0.3);
+    border-radius: 50px;
+    border: 1px solid black;
+
+    p {
+        margin-bottom: 12px;
+    }
+}
