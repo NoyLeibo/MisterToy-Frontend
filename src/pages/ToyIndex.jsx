@@ -20,9 +20,8 @@ export function ToyIndex() {
     useEffect(() => {
         loadToys()
             .catch(() => {
-                console.log('toys problem')
+                console.log('toys problem | no toys')
                 navigate('/')
-
             })
     }, [filterBy])
 
@@ -44,19 +43,20 @@ export function ToyIndex() {
     //         })
     // }
 
-    // function onAddToy() {
-    //     const ToyToSave = toyService.getEmptyToy()
-    //     saveToy(ToyToSave)
-    //         .then((savedToy) => {
-    //             console.log('savedToy:', savedToy)
-    //             showSuccessMsg(`Toy added (vendor: ${savedToy.vendor})`)
-    //             // dispatch({ type: ADD_TOY, toy: savedToy })
-    //         })
-    //         .catch(err => {
-    //             console.log('Cannot add toy', err)
-    //             showErrorMsg('Cannot add toy')
-    //         })
-    // }
+    function onAddToy() {
+        console.log('test');
+        //     const ToyToSave = toyService.getEmptyToy()
+        //     saveToy(ToyToSave)
+        //         .then((savedToy) => {
+        //             console.log('savedToy:', savedToy)
+        //             showSuccessMsg(`Toy added (vendor: ${savedToy.vendor})`)
+        //             // dispatch({ type: ADD_TOY, toy: savedToy })
+        //         })
+        //         .catch(err => {
+        //             console.log('Cannot add toy', err)
+        //             showErrorMsg('Cannot add toy')
+        //         })
+    }
 
     // if (!toys.length) {
     //     onSetFilter = useRef(utilService.debounce(onSetFilter))
@@ -69,21 +69,21 @@ export function ToyIndex() {
     }
 
     return (
-        <div>
-            <main>
-                {isLoading && (
-                    <div className="loading-container">
-                        <div className="loader"></div>
-                    </div>
-                )}
-                {!isLoading && toys.length && (
-                    <>
+        <main>
+            {isLoading && (
+                <div className="loading-container">
+                    <div className="loader"></div>
+                </div>
+            )}
+            {!isLoading && toys.length && (
+                <>
+                    <div className='flex align-center justify-center'>
                         <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-                        <button className='index-btn'>Add Toy 🧸</button>
-                        <ToyList toys={toys} onEditToy={onEditToy} />
-                    </>
-                )}
-            </main>
-        </div>
+                        <button onClick={() => onAddToy()} className='index-btn'>Add Toy 🧸</button>
+                    </div>
+                    <ToyList toys={toys} onEditToy={onEditToy} />
+                </>
+            )}
+        </main>
     );
 }
