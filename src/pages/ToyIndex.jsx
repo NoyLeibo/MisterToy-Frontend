@@ -77,10 +77,7 @@ export function ToyIndex() {
             )}
             {!isLoading && toys.length && (
                 <>
-                    <div className='flex align-center justify-center'>
-                        <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-                        <button onClick={() => onAddToy()} className='index-btn'>Add Toy 🧸</button>
-                    </div>
+                    <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
                     <ToyList toys={toys} onEditToy={onEditToy} />
                 </>
             )}

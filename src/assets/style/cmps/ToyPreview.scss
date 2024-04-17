@@ -17,3 +17,11 @@
         max-height: 650px;
     }
 }
+
+.buynow-btn {
+    &:hover {
+        text-decoration: underline;
+        font-size: 18px;
+        color: bisque;
+    }
+}

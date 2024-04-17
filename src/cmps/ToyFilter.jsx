@@ -85,6 +85,8 @@ export function ToyFilter({ filterBy, onSetFilter }) {
                         <a href="#" className="search-item" onClick={() => filterByStock(false)}>No</a>
                     </div>
                 </div>
+                <div onClick={() => onAddToy()} className='dropbtn'>Add Toy 🧸</div>
+
             </div>
         </section>
     )

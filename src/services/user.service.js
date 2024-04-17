@@ -11,7 +11,7 @@ export const userService = {
     getById,
     getLoggedinUser,
     updateScore,
-    getEmptyCredentials
+    getEmptyUser
 }
 
 function getById(userId) {
@@ -27,9 +27,9 @@ function login({ username, password }) {
         })
 }
 
-async function signup({ username, password, fullname, isAdmin = false, score = 1000 }) {
-    const user = { username, password, fullname, isAdmin, score }
-    console.log('before sending API', user);
+async function signup({ username, password, fullname, isAdmin = false, score = 1000, toys = {} }) {
+    const user = { username, password, fullname, isAdmin, score, toys }
+    console.log('before sending to API(and then MONGO)', user);
     const newUser = await httpService.post(BASE_URL + 'signup', user)
     if (newUser) return _setLoggedinUser(newUser)
     else return Promise.reject('Invalid signup')
@@ -61,19 +61,21 @@ function _setLoggedinUser(user) {
         fullname: user.fullname,
         username: user.username,
         isAdmin: user.isAdmin,
-        score: user.score
+        score: user.score,
+        toys: user.toys,
     }
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(userToSave))
     return userToSave
 }
 
-function getEmptyCredentials() {
+function getEmptyUser() {
     return {
         username: '',
         password: '',
         fullname: '',
         score: 0,
-        isAdmin: false
+        isAdmin: false,
+        toys: {}
     }
 }
 

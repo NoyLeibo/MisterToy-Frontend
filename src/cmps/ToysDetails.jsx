@@ -51,7 +51,7 @@ export function ToysDetails() {
                                 ?
                                 <div className="flex align-center justify-center">
                                     <i className="fa-solid fa-check" aria-label="In stock"></i>
-                                    <span className="marginleft10 pointer">Buy Now</span>
+                                    <span className="marginleft10 pointer buynow-btn">Buy Now</span>
                                 </div>
                                 :
                                 <i className="fa-solid fa-x" aria-label="Out of stock"></i>
