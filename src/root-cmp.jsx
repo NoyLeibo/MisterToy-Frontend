@@ -9,6 +9,7 @@ import { toyService } from './services/toy.service'
 import { ToyIndex } from './pages/ToyIndex.jsx'
 import { LoginPage } from './pages/LoginPage.jsx'
 import { RegisterPage } from './pages/RegisterPage.jsx'
+import { AddNewToy } from './pages/AddNewToy.jsx'
 import { store } from './store/store'
 import { ToysDetails } from './cmps/ToysDetails.jsx'
 
@@ -27,6 +28,7 @@ export function App() {
               <Route element={<LoginPage />} path="/login" />
               <Route element={<RegisterPage />} path="/register" />
               <Route element={<ToysDetails />} path="/toy/:toyId" />
+              <Route element={<AddNewToy />} path="/toy/add" />
               {/* <Route element={<ToyEdit />} path="/toy/edit/:toyId" /> */}
               {/* <Route element={<ToyEdit />} path="/toy/edit/" /> יצירה של צעצוע חדש */}
               {/* <Route element={<DashboardIndex />} path="/dashboard" /> */}

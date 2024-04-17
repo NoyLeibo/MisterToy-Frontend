@@ -44,7 +44,7 @@ export function ToyIndex() {
     // }
 
     function onAddToy() {
-        console.log('test');
+        navigate('/toy/add')
         //     const ToyToSave = toyService.getEmptyToy()
         //     saveToy(ToyToSave)
         //         .then((savedToy) => {
@@ -77,7 +77,7 @@ export function ToyIndex() {
             )}
             {!isLoading && toys.length && (
                 <>
-                    <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                    <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} onAddToy={onAddToy} />
                     <ToyList toys={toys} onEditToy={onEditToy} />
                 </>
             )}

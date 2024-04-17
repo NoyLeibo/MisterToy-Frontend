@@ -3,7 +3,7 @@ import { utilService } from "../services/util.service.js"
 import { toyService } from "../services/toy.service.js"
 import { useEffectUpdate } from "./customHooks/useEffectUpdate.js"
 
-export function ToyFilter({ filterBy, onSetFilter }) {
+export function ToyFilter({ filterBy, onSetFilter, onAddToy }) {
     const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
     onSetFilter = useRef(utilService.debounce(onSetFilter))
 
@@ -85,7 +85,7 @@ export function ToyFilter({ filterBy, onSetFilter }) {
                         <a href="#" className="search-item" onClick={() => filterByStock(false)}>No</a>
                     </div>
                 </div>
-                <div onClick={() => onAddToy()} className='dropbtn'>Add Toy 🧸</div>
+                <div onClick={() => onAddToy()} className='dropbtn pointer'>Add Toy 🧸</div>
 
             </div>
         </section>
