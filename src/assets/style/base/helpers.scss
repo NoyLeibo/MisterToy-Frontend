@@ -59,3 +59,14 @@ h1 {
 .bold {
     font-weight: bold;
 }
+
+.margin-auto {
+    margin: auto;
+}
+
+.bigger-hover {
+    &:hover {
+        transform: scale(1.5);
+        transition: .3s;
+    }
+}

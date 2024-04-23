@@ -21,7 +21,7 @@ export function ToyPreview({ toy, onEditToy }) {
                 In stock: {inStock ? <i className="fa-solid fa-check"></i> : <i className="fa-solid fa-x"></i>}
             </h4>
             <div className="flex justify-center">
-                {loggedInUser.isAdmin && <button onClick={() => onEditToy(_id)} className="preview-btn">Edit</button>}
+                {/* {loggedInUser.isAdmin ? <button onClick={() => onEditToy(_id)} className="preview-btn">Edit</button> : ''} */}
                 <button onClick={() => onEditToy(_id)} className="preview-btn">Details</button>
                 {/* <button className="preview-btn">Buy</button> */}
             </div>

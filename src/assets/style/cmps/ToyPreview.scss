@@ -2,8 +2,8 @@
     text-align: center;
     // display: flex;
     // flex-direction: column;
-    width: 18rem;
-    height: 18rem;
+    min-width: 18rem;
+    min-height: 18rem;
 }
 
 @media (max-width: 1000px) {

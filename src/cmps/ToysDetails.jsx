@@ -32,8 +32,8 @@ export function ToysDetails() {
         </div>)
 
     return (
-        <section className="flex align-items flex-column">
-            <KeyboardBackspaceIcon />
+        <section className="flex align-center justify-center flex-row">
+            <KeyboardBackspaceIcon fontSize="large" className="pointer bigger-hover" onClick={() => navigate('/toy')} />
 
             <ul className="toy-list flex">
                 <li className="toy-preview">
