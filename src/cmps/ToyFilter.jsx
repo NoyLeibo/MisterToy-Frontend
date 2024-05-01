@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from "react"
 import { utilService } from "../services/util.service.js"
 import { toyService } from "../services/toy.service.js"
 import { useEffectUpdate } from "./customHooks/useEffectUpdate.js"
+import { useSelector } from "react-redux";
 
 export function ToyFilter({ filterBy, onSetFilter, onAddToy }) {
     const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
+    const loggedInUser = useSelector(storeState => storeState.userModule.loggedInUser)
     onSetFilter = useRef(utilService.debounce(onSetFilter))
 
     useEffectUpdate(() => {
@@ -85,8 +87,7 @@ export function ToyFilter({ filterBy, onSetFilter, onAddToy }) {
                         <a href="#" className="search-item" onClick={() => filterByStock(false)}>No</a>
                     </div>
                 </div>
-                <div onClick={() => onAddToy()} className='dropbtn pointer'>Add Toy 🧸</div>
-
+                {loggedInUser && <div onClick={() => onAddToy()} className='dropbtn pointer'>Add Toy 🧸</div>}
             </div>
         </section>
     )

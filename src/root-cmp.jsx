@@ -15,6 +15,8 @@ import { ToysDetails } from './cmps/ToysDetails.jsx'
 
 export function App() {
 
+
+
   return (
     <Provider store={store}>
       <Router>

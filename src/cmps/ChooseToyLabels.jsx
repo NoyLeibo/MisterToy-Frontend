@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { toyService } from "../services/toy.service";
 
-export function ChooseToyLabels() {
+export function ChooseToyLabels({ clickedLabels, setClickedLabels }) {
+
     const labels = toyService.getLabels();
-    const [clickedLabels, setClickedLabels] = useState([]);
 
     function onClickLabel(label) {
         if (clickedLabels.includes(label)) {
