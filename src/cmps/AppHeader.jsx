@@ -26,7 +26,7 @@ export function AppHeader() {
                 <h2>DisneyMovie</h2>
                 <nav className="app-nav">
                     <NavLink className={currPath === "/" ? "activecolor" : ""} to="/">Home</NavLink>
-                    <NavLink className={currPath === "/toy" ? "activecolor" : ""} to="/toy">Toys</NavLink>
+                    <NavLink className={currPath.startsWith("/toy") ? "activecolor" : ""} to="/toy">Toys</NavLink>
                     {loggedInUser ?
                         <button className="logoutbtn" onClick={handleLogout}>Logout</button> :
                         <NavLink className={currPath === "/login" ? "activecolor" : ""} to="/login">Login</NavLink>}
