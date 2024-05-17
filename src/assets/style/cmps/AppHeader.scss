@@ -25,6 +25,12 @@
     text-decoration: none;
     color: var(--clr1bg);
 
+    .activecolor {
+        color: #d6bcbc;
+        border-bottom: 2px solid #ae2012;
+
+    }
+
     a,
     .logoutbtn {
         color: $gray1;
@@ -39,10 +45,9 @@
         border: none;
         cursor: pointer;
 
-
         &:hover {
-            color: #a8a8a8;
-            border-bottom: 2px solid #a8a8a8;
+            color: #d6bcbc;
+
         }
     }
 }

@@ -2,8 +2,8 @@
     text-align: center;
     // display: flex;
     // flex-direction: column;
-    width: 18rem;
-    height: 18rem;
+    min-width: 18rem;
+    min-height: 18rem;
 }
 
 @media (max-width: 1000px) {
@@ -15,5 +15,13 @@
     .toy-list {
         overflow-y: scroll;
         max-height: 650px;
+    }
+}
+
+.buynow-btn {
+    &:hover {
+        text-decoration: underline;
+        font-size: 18px;
+        color: bisque;
     }
 }

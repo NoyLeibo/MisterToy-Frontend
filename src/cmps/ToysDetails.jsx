@@ -32,8 +32,8 @@ export function ToysDetails() {
         </div>)
 
     return (
-        <section className="flex align-items flex-column">
-            <KeyboardBackspaceIcon />
+        <section className="flex align-center justify-center flex-row">
+            <KeyboardBackspaceIcon fontSize="large" className="pointer bigger-hover" onClick={() => navigate('/toy')} />
 
             <ul className="toy-list flex">
                 <li className="toy-preview">
@@ -48,8 +48,13 @@ export function ToysDetails() {
                     <h4>
                         In stock: {
                             toy.inStock
-                                ? <i className="fa-solid fa-check" aria-label="In stock"></i>
-                                : <i className="fa-solid fa-x" aria-label="Out of stock"></i>
+                                ?
+                                <div className="flex align-center justify-center">
+                                    <i className="fa-solid fa-check" aria-label="In stock"></i>
+                                    <span className="marginleft10 pointer buynow-btn">Buy Now</span>
+                                </div>
+                                :
+                                <i className="fa-solid fa-x" aria-label="Out of stock"></i>
                         }
                     </h4>
                 </li>

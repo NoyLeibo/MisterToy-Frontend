@@ -6,8 +6,7 @@
     border: 1px solid black;
     height: 75vh;
     box-shadow: 0 0 17px 3px black;
-    overflow: scroll;
-    
+
     @media (max-width: 768px) {
         height: auto;
         margin: 15px;

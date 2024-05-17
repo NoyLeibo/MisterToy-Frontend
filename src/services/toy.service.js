@@ -17,6 +17,7 @@ export const toyService = {
     remove,
     getEmptyToy,
     getDefaultFilter,
+    getLabels,
 }
 
 function query(filterBy = {}) {
@@ -47,8 +48,18 @@ function getDefaultFilter() {
 
 function getEmptyToy() { // לתקן 
     return {
-        vendor: 'Susita-' + (Date.now() % 1000),
-        price: utilService.getRandomIntInclusive(1000, 9000),
-        speed: utilService.getRandomIntInclusive(75, 200),
+        'name': '',
+        'price': 0,
+        'labels': [],
+        'createdAt': Date.now(),
+        'inStock': true,
+        'toyOwner': {
+            '_id': '',
+            'username': '',
+        },
     }
+}
+
+function getLabels() { // נוחות בשבילי לדעת מה כל הLabels
+    return (['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle', 'Outdoor', 'Battery Powered'])
 }

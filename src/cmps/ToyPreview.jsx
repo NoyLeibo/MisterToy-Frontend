@@ -1,5 +1,13 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+
 export function ToyPreview({ toy, onEditToy }) {
+    const loggedInUser = useSelector(storeState => storeState.userModule.loggedInUser)
     const { name, price, labels, inStock, _id } = toy;
+
+    // useEffect(() => {
+    //     console.log(loggedInUser);
+    // }, [])
 
     return (
         <li className="toy-preview">
@@ -13,7 +21,7 @@ export function ToyPreview({ toy, onEditToy }) {
                 In stock: {inStock ? <i className="fa-solid fa-check"></i> : <i className="fa-solid fa-x"></i>}
             </h4>
             <div className="flex justify-center">
-                <button onClick={() => onEditToy(_id)} className="preview-btn">Edit</button>
+                {/* {loggedInUser.isAdmin ? <button onClick={() => onEditToy(_id)} className="preview-btn">Edit</button> : ''} */}
                 <button onClick={() => onEditToy(_id)} className="preview-btn">Details</button>
                 {/* <button className="preview-btn">Buy</button> */}
             </div>

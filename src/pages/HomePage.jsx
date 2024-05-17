@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 export function HomePage() {
     const loggedInUser = useSelector(storeState => storeState.userModule.loggedInUser)
-    console.log(loggedInUser);
+
     return (
         <main className="main-content">
             {loggedInUser && (

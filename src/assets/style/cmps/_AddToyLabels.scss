@@ -1,0 +1,70 @@
+.labels-container {
+    color: white;
+    border: 2px solid rgb(149, 0, 0);
+    background-color: rgba(140, 140, 140, 0.746);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label-card {
+    border: 1px solid #ccc;
+    margin: 15px;
+    transition: background-color 0.3s;
+    height: 5rem;
+    width: 10rem;
+}
+
+.label-card:hover {
+    background-color: rgba(160, 160, 160, 0.9);
+}
+
+.fa-xl {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.icon-inactive {
+    opacity: 0.6;
+}
+
+.icon-active {
+    opacity: 1;
+}
+
+
+.form-label {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.form-input {
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 10rem;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: #0056b3;
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}

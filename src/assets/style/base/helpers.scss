@@ -1,7 +1,19 @@
+h1 {
+    font-size: 2rem;
+}
+
 /* flex helpers */
 
 .flex {
     display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .flex-column {
@@ -16,6 +28,45 @@
     justify-content: space-between;
 }
 
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
 .align-center {
     align-items: center;
+}
+
+.marginleft10 {
+    margin-left: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.whitetxt {
+    color: white;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.underline {
+    text-decoration: underline !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.bigger-hover {
+    &:hover {
+        transform: scale(1.5);
+        transition: .3s;
+    }
 }
